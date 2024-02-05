@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.UserController">
+   <children>
+      <ImageView fitHeight="201.0" fitWidth="823.0" layoutY="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../food-facebook-cover-02.jpg" />
+         </image>
+      </ImageView>
+
+      <TableView fx:id="tableView" layoutX="725.0" layoutY="590.0" opacity="0.0" prefHeight="13.0" prefWidth="27.0">
+        <columns>
+          <TableColumn fx:id="hargaColumn" prefWidth="127.0" text="Harga" />
+          <TableColumn fx:id="detailColumn" prefWidth="282.0" text="Detail" />
+          <TableColumn fx:id="foodNameColumn" prefWidth="310.0" text="Nama Makanan" />
+        </columns>
+      </TableView>
+      <Pane fx:id="menuBar" layoutX="-1.0" layoutY="211.0" prefHeight="49.0" prefWidth="831.0">
+         <children>
+            <MenuBar layoutX="39.0" layoutY="12.0" prefHeight="25.0" prefWidth="737.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Beranda">
+                  <items>
+                    <MenuItem onAction="#showBeranda" text="Tampilkan Beranda" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Produk">
+                  <items>
+                    <MenuItem onAction="#showProduk" text="Tampilkan Produk" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Keluar">
+                  <items>
+                    <MenuItem onAction="#exitApplication" text="Keluar" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+      <TextArea editable="false" layoutX="77.0" layoutY="356.0" prefHeight="200.0" prefWidth="648.0" style="-fx-background-color: gray;" text="Ayam Geprek Express adalah hasil dari kecintaan kami terhadap cita rasa unik dan kelezatan ayam geprek. &#10;Sebagai pecinta kuliner, kami memahami betapa pentingnya pengalaman makan yang memuaskan dan memikat lidah.&#10;Oleh karena itu, Ayam Geprek Express hadir sebagai jawaban atas kebutuhan akan sajian ayam geprek yang lezat dan&#10;bermutu tinggi." />
+      <Label layoutX="309.0" layoutY="291.0" text="Tentang Kami">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="178.0" fitWidth="237.0" layoutX="636.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../food4.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
